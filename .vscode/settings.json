@@ -1,4 +1,18 @@
 {
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/node_modules/**": true,
+    "**/.nx/*/**": true,
+    "**/dist/**": true,
+    "**/tmp/**": true,
+    "**/out-tsc/**": true,
+    "**/coverage/**": true,
+    "**/.cache/**": true,
+    "**/.DS_Store": true
+  },
+
   "eslint.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.codeAction.showDocumentation": {
@@ -6,10 +20,53 @@
   },
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
-  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+
+  // Ensure Prettier is used for common file types
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   "nxConsole.generateAiAgentRules": true,
   "nxConsole.enableCodeLens": true,
-  "nxConsole.nxCloudNotifications": "all"
+  "nxConsole.nxCloudNotifications": "all",
+
+  // Use the monorepo's version of TypeScript
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Exclude generated files and dependencies from search results for better performance
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.nx": true,
+    "**/dist": true,
+    "**/tmp": true,
+    "**/out-tsc": true,
+    "**/coverage": true,
+    "**/.cache": true,
+    "package-lock.json": true,
+    "pnpm-lock.yaml": true,
+    "yarn.lock": true
+  },
+
+  // Useful for large monorepos to prevent frequent git status warnings
+  "git.ignoreLimitWarning": true
 }

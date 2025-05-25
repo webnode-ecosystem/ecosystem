@@ -41,12 +41,11 @@
   ],
   "generators": {
     "@nx/js:library": {
-      "useProjectJson": false,
-      "publishable": "false",
+      "bundler": "swc",
       "linter": "eslint",
+      "publishable": "false",
       "unitTestRunner": "vitest",
-      "e2eTestRunner": "none",
-      "bundler": "swc"
+      "useProjectJson": false
     }
   }
 }
