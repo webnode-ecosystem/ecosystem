@@ -1,9 +1,16 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "production": ["default"],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default"
+    ],
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml"
+    ]
   },
   "nxCloudId": "68333faf5b708dfecca91814",
   "plugins": [
@@ -19,5 +26,15 @@
         }
       }
     }
-  ]
+  ],
+  "generators": {
+    "*": {
+      "linter": "eslint",
+      "unitTestRunner": "vitest",
+      "e2eTestRunner": "none",
+      "compiler": "swc",
+      "publishable": "false",
+      "useProjectJson": false
+    }
+  }
 }
