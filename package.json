@@ -21,10 +21,13 @@
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@types/node": "18.16.9",
+    "@typescript-eslint/parser": "^8.32.1",
+    "@typescript-eslint/utils": "^8.32.1",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-eslint-plugin": "^6.4.0",
     "eslint-plugin-jsdoc": "^50.6.17",
     "eslint-plugin-prettier": "^5.4.0",
     "globals": "^16.2.0",
@@ -40,6 +43,5 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "dependencies": {}
+  }
 }

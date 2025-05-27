@@ -1,7 +1,9 @@
 {
   "name": "@webnode-ecosystem/eslint-plugin",
   "version": "0.0.1",
-  "private": true,
+  "description": "ESLint plugin for WebNode Ecosystem specific linting rules.",
+  "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -14,6 +16,50 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctrlmaniac/webnode-ecosystem.git",
+    "directory": "tools/eslint-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/ctrlmaniac/webnode-ecosystem/issues"
+  },
+  "homepage": "https://github.com/ctrlmaniac/webnode-ecosystem/tree/main/tools/eslint-plugin#readme",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "webnode",
+    "webnode-ecosystem",
+    "webnode-dev-config",
+    "webnode-dev-tool",
+    "dev-tool",
+    "lint",
+    "linter",
+    "code-quality",
+    "static-analysis",
+    "code-style",
+    "nx"
+  ],
+  "dependencies": {
+    "@swc/helpers": "~0.5.11",
+    "@typescript-eslint/utils": "^8.32.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.32.1",
+    "@typescript-eslint/rule-tester": "^8.32.1",
+    "eslint": "^9.27.0",
+    "typescript": "~5.7.3"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": ">=9.0.0",
+    "typescript": "~5.7.3"
   },
   "nx": {
     "sourceRoot": "tools/eslint-plugin/src",
@@ -32,8 +78,5 @@
         }
       }
     }
-  },
-  "dependencies": {
-    "@swc/helpers": "~0.5.11"
   }
 }
